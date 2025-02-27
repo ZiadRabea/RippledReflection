@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rippled Reflection</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #f2f9ff;
+      color: #333;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .logo {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+    .site-title {
+      font-size: 2em;
+      color: #800080; /* Purple color */
+      margin: 0;
+    }
+    
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 100vh;
+      background: linear-gradient(135deg, #e0f7fa, #f3e5f5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .hero h1 {
+      font-size: 3em;
+      z-index: 2;
+      color: #01579b;
+      margin: 0;
+      line-height: 1.2;
+    }
+    .cta-button {
+      margin-top: 20px;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      color: #fff;
+      background: linear-gradient(135deg, #4fc3f7, #9575cd);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      z-index: 2;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .cta-button:hover {
+      background: linear-gradient(135deg, #81d4fa, #b39ddb);
+    }
+    .ripple {
+      position: absolute;
+      border: 5px solid rgba(1, 87, 155, 0.3);
+      border-radius: 50%;
+      animation: ripple 4s infinite;
+      z-index: 1;
+    }
+    .ripple:nth-child(1) { width: 200px; height: 200px; }
+    .ripple:nth-child(2) { width: 300px; height: 300px; animation-delay: 1s; }
+    .ripple:nth-child(3) { width: 400px; height: 400px; animation-delay: 2s; }
+    @keyframes ripple {
+      0% {
+        transform: scale(0.5);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+    
+    /* Features Grid */
+    .features {
+      padding: 50px 20px;
+      background: #fff;
+    }
+    .features h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.5em;
+      color: #01579b;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .feature-item {
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      background: #f9f9f9;
+      transition: transform 0.3s ease;
+    }
+    .feature-item:hover {
+      transform: scale(1.03);
+    }
+    .feature-item img {
+      width: 100%;
+      display: block;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+    }
+    .feature-item:hover img {
+      filter: grayscale(0%);
+    }
+    .feature-description {
+      padding: 15px;
+      text-align: center;
+    }
+    .feature-description h3 {
+      margin: 10px 0 5px;
+      color: #800080;
+    }
+    .feature-description p {
+      font-size: 0.95em;
+      line-height: 1.4;
+    }
+    
+    /* Footer with Contact Form */
+    footer {
+      background: #f2f9ff;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    footer h3 {
+      font-size: 2em;
+      color: #01579b;
+      margin-bottom: 20px;
+    }
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+      width: 100%;
+    }
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    .contact-form button {
+      padding: 15px;
+      font-size: 1.2em;
+      color: #fff;
+      background: #9575cd;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .contact-form button:hover {
+      background: #b39ddb;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img style="border-radius: 50%;" src="https://rippledreflection.skipsites.com/_next/image?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fyogov-4ce4e.appspot.com%2Fo%2Fwebsite%252Ft0SobBzr6MNspGlayVaP0tRKUar2%252Fb030f38635b5fe916515cae032511751e3086c2eca38e25b0e6e44a185c3e5bd%3Falt%3Dmedia&w=640&q=75" width="50" height="50" alt="Logo" class="logo">
+    <h1 class="site-title">Rippled Reflection</h1>
+  </header>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="ripple"></div>
+    <div class="ripple"></div>
+    <div class="ripple"></div>
+    <div>
+      <h1>Welcome to Rippled Reflection<br>Navigate life's waves with arts</h1>
+      <a href="#" class="cta-button">Reflect. Renew. Revive.</a>
+    </div>
+  </section>
+  
+  <!-- Features Grid -->
+  <section class="features">
+    <h2>Community Features</h2>
+    <div class="features-grid">
+      <div class="feature-item">
+        <img src="https://images.pexels.com/photos/1267697/pexels-photo-1267697.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="400" height="250" alt="Support Groups">
+        <div class="feature-description">
+          <h3>Support Groups</h3>
+          <p>Connect with peers who understand your journey.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <img src="https://images.pexels.com/photos/542556/pexels-photo-542556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="400" height="250" alt="Resource Library">
+        <div class="feature-description">
+          <h3>Resource Library</h3>
+          <p>Explore articles, videos, and inspiring stories.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <img src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="400" height="250" alt="Workshops & Events">
+        <div class="feature-description">
+          <h3>Workshops & Events</h3>
+          <p>Participate in inclusive workshops and community events.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <img src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=600" width="400" height="250" alt="Counseling">
+        <div class="feature-description">
+          <h3>Mentoring</h3>
+          <p>Personalized sessions with professional counselors.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer with Contact Form -->
+  <footer>
+    <h3>Get in Touch</h3>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p style="margin-top:20px;">
+      Ready to take the next step? 
+      <a href="#" class="cta-button">Join the Reflection</a>
+    </p>
+  </footer>
+</body>
+</html>
